@@ -1,0 +1,50 @@
+search misth
+search
+open_with xarchiver
+shell 
+search ww
+search med
+search javasc
+search gul
+touch assets/.keep
+search yii
+rename yii-1.1.15
+search *xls
+search xls
+search site
+rename menu_oikonomikon.php
+rename stats_oikomikon.php
+rename stats_oikonomikon.php
+open_with gvim
+rename morfopoiisi.html
+search paym
+rename enoikio_2019-01.pdf
+rename stats_esoda_cats.php
+search 
+;
+q
+q!
+search mode
+mkdir assets
+mkdir protected/runtime/
+delete
+mkdir uploads
+search παυ
+search pay
+rename enoikio_2019-02.pdf
+
+shell
+search step
+search ste
+search sha
+search shanme
+search the.wal
+search shame
+search the.walk
+search walking
+search mav
+search lubed
+search dead
+search walk
+search deb
+open_with 
