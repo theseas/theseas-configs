@@ -89,14 +89,16 @@ set noswapfile
 " Tab and Indent config
 set tabstop=4 " width of TAB \t
 set shiftwidth=4 " width of indent
-set noexpandtab " make indent hard tabs
+set expandtab " make indent hard tabs
 set autoindent " copies the indent of the previous line
 filetype plugin indent on " indent code based on filetype
+" enable omni-complition
+set omnifunc=syntaxcomplete#Complete
 
 " ============================================================================
 " Python IDE Setup
 " ============================================================================
- 
+
  
 " Settings for vim-powerline
 "set laststatus=2
