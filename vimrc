@@ -1,6 +1,4 @@
-" Sample .vimrc file by Martin Brochhaus
-" Presented at PyCon APAC 2012
-" Edited and updated by Christopher Karagiannopoulos and Theseas Maroulis
+" Author: Theseas Maroulis
  
  
 " Automatic reloading of .vimrc
@@ -45,11 +43,12 @@ syntax on
 
 " Display all matching files when we tab complete
 set wildmenu
+" set wildmode=longest
 
 " Tag Jumping
 
 " Create the 'tags' file
-command! MakeTags !ctags -R .
+command Ctags !ctags -R .
  
 " Showing line numbers and length
 set number " show line numbers
@@ -57,11 +56,11 @@ set relativenumber
 " increase performance of relativenumbers
 set lazyredraw
 
-set tw=85 " width of document (used by gd)
+set tw=80 " width of document (used by gd)
 set nowrap " don't automatically wrap on load
 set fo-=t " don't automatically wrap text when typing
-" set colorcolumn=80
-" highlight ColorColumn ctermbg=233
+"set colorcolumn=80
+"highlight ColorColumn ctermbg=0
  
  
 " Useful settings
@@ -124,9 +123,21 @@ set mouse=a
 " highlight current line
 set cursorline
 
+" treat svelte files as html
+au! BufNewFile,BufRead *.svelte set ft=html
+
+colorscheme industry
+set nocursorline
 if has("gui_running")
-	colorscheme industry
-	set gfn=Monospace\ Regular\ 16
-	set nocursorline
+    set gfn=Monospace\ Regular\ 18
 endif
 
+" CtrlP Options
+set wildignore+=./assets/*,./protected/uploads/*,*/node_modules/*,./logs/*,./vendor/*
+let g:ctrlp_max_files=0
+
+" add files that is in the git only
+let g:ctrlp_user_command = [
+    \ '.git', 'cd %s && git ls-files . -co --exclude-standard',
+    \ 'find %s -type f'
+    \ ]
